@@ -22,8 +22,8 @@ public class StreamingJob {
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 		// env.enableCheckpointing(5000);
 		env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-                env.getConfig().enableSysoutLogging();
-                          
+                
+                
 		Properties properties = new Properties();
 		properties.setProperty("bootstrap.servers", "localhost:9092");
 

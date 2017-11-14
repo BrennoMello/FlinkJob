@@ -115,6 +115,13 @@ under the License.
                     <artifactId>flink-metrics-dropwizard</artifactId>
                     <version>${flink.version}</version>
                 </dependency>
+                
+                <dependency>
+                    <groupId>org.apache.flink</groupId>
+                    <artifactId>flink-metrics-core</artifactId>
+                    <version>1.5-SNAPSHOT</version>
+                        <type>jar</type>
+                </dependency>
 	</dependencies>
 
 	<profiles>
