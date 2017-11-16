@@ -1,6 +1,7 @@
 package com.demo.flink.streaming;
 
 import java.util.Properties;
+import org.apache.flink.api.common.functions.FilterFunction;
 
 
 import org.apache.flink.api.java.tuple.Tuple;
@@ -54,7 +55,15 @@ public class StreamingJob {
 
 					}
 				});
-
+                
+                /*
+                keyedStream.filter(new FilterFunction<Tuple2<String,Double>>() {
+                    @Override
+                    public boolean filter(Tuple2<String, Double> value) throws Exception {
+                        return value.f1 > 25;
+                    }
+                });*/
+                
 		keyedStream.print();
 
 		// execute program
